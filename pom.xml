@@ -11,7 +11,7 @@
     <groupId>dev</groupId>
     <artifactId>WebService_Admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>WebService_Admin</name>
     <description>WebService_Admin</description>
     <properties>
@@ -48,7 +48,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
