@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'foodadmin'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F0325C5F8CB0493289DFCE75299CAE94 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6A1F1717321548CD883DDB029EAEC239 }}
           package: '*.war'
