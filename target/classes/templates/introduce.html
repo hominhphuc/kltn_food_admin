@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragment-header :: fm-head"></head>
+
+<head><title>Quản lý giới thiệu</title></head>
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
+<div class="wrapper">
+
+    <header th:replace="fragment-header :: fm-header"></header>
+    <aside th:replace="fragment-leftmenu :: fm-leftmenu"></aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-body">
+                            <table id="example2" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Mã</th>
+                                    <th>Ảnh</th>
+                                    <th>Tên</th>
+                                    <th>Tiêu đề</th>
+                                    <th>Nội dung</th>
+                                    <th>Sửa</th>
+                                    <th>Xóa</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+<!-- ./wrapper -->
+
+<div th:replace="fragment-modal-introduce :: fm-modal-introduce"></div>
+<div th:replace="fragment-modal-product :: fm-modal-upload"></div>
+<div th:replace="fragment-modal-notification :: fm-modal-notification"></div>
+<div th:replace="fragment-header :: fm-script"></div>
+
+<!-- CRUD Introduce -->
+<script src="../../js/crud-introduce.js"></script>
+
+</body>
+
+</html>

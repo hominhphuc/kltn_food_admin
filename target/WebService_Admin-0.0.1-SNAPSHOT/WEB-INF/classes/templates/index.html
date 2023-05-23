@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragment-header :: fm-head"></head>
+
+<head>
+    <title>Đang chuyển trang...</title>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
+<div class="wrapper">
+
+    <header th:replace="fragment-header :: fm-header"></header>
+    <aside th:replace="fragment-leftmenu :: fm-leftmenu"></aside>
+
+</div>
+
+<div th:replace="fragment-header :: fm-script"></div>
+
+<!-- Trở về đúng trang theo role -->
+<script>
+    $(function () {
+        const ROLE_STAFF_SALES = 'ROLE_STAFF_SALES'
+        const ROLE_STAFF_WAREHOUSE = 'ROLE_STAFF_WAREHOUSE'
+        const ROLE_ADMIN = 'ROLE_ADMIN'
+
+        var role = $('#role_name').val()
+
+        switch (role) {
+            case ROLE_STAFF_SALES:
+                window.location.href = '/order'
+                break
+            case ROLE_STAFF_WAREHOUSE:
+                window.location.href = '/product'
+                break
+            case ROLE_ADMIN:
+                window.location.href = '/nhan-vien'
+                break
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-WebServiceAdminApplication<WebService_Admin>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "dev.webservice_admin.WebServiceAdminApplication",
+            "projectName": "WebService_Admin",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

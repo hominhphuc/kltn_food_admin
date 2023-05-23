@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+
+<div class="modal fade" id="modal-xl" th:fragment="fm-modal">
+    <div class="modal-dialog modal-xl">
+        <form id="create-update-product">
+            <div class="modal-content">
+                <div class="overlay" id="loading-event"><i class="fas fa-3x fa-sync-alt fa-spin"></i>
+                    <div class="text-bold pt-2"></div>
+                </div>
+                <div class="modal-header">
+                    <h4 class="modal-title">Thông tin mặt hàng</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="profile-pic-div-1">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1040/1040241.png"
+                             class="elevation-2" alt="User Image" id="image-upload-firebase">
+                        <input type="file" id="file-upload-firebase">
+                        <label for="file-upload-firebase" id="image-upload-btn">Chọn hình ảnh</label>
+                    </div>
+                    <div style="margin-top: -130px;">
+                        <div class="col-lg-12">
+                            <div class="col-lg-6 float-left form-group" style="height: 80px">
+                                <label for="ma-mat-hang">Mã mặt hàng</label>
+                                <input id="ma-mat-hang" type="text" class="form-control" readonly>
+                            </div>
+                            <div class="col-lg-6 float-right form-group" style="height: 80px">
+                                <label for="ten-mat-hang">Tên mặt hàng</label>
+                                <input id="ten-mat-hang" type="text" class="form-control" placeholder="VD: Bánh mì"
+                                       name="nameProduct">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="col-lg-6 float-left form-group" style="height: 80px">
+                                <label for="mo-ta-mat-hang">Mô tả</label>
+                                <input id="mo-ta-mat-hang" type="text" class="form-control"
+                                       placeholder="VD: Bánh mì kẹp thịt heo quay, dưa leo" name="description">
+                            </div>
+                            <div class="col-lg-6 float-right form-group" style="height: 80px">
+                                <label for="don-vi-tinh">Đơn vị tính</label>
+                                <input id="don-vi-tinh" type="text" class="form-control" placeholder="VD: ổ"
+                                       name="unitProduct">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="col-lg-6 float-left form-group" style="height: 80px">
+                                <label for="don-gia-mat-hang">Đơn giá</label>
+                                <input id="don-gia-mat-hang" type="text" class="form-control" placeholder="VD: 15000"
+                                       name="cost">
+                            </div>
+                            <div class="col-lg-6 float-right form-group" style="height: 80px">
+                                <label for="op-loaimh">Loại mặt hàng</label>
+                                <select name="categories" id="op-loaimh" class="form-control"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    <button id="btn-luu-mat-hang" type="submit" class="btn btn-primary">Lưu thông tin</button>
+                </div>
+            </div>
+        </form>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal fade" id="modal-success" style="padding-top: 200px" th:fragment="fm-modal-upload">
+    <div class="modal-dialog">
+        <div class="modal-content bg-success">
+            <div class="modal-header">
+                <h4 class="modal-title">Tải danh sách các mặt hàng</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form-upload-file" enctype="multipart/form-data" method="post">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="exampleInputFile"
+                                       name="exampleInputFile" accept=".xlsx" required>
+                                <label class="custom-file-label" for="exampleInputFile">Chọn file Excel (.xlsx) hoặc kéo
+                                    thả
+                                    vào đây</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="submit" class="btn btn-outline-light">Tải lên</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+</body>
+</html>

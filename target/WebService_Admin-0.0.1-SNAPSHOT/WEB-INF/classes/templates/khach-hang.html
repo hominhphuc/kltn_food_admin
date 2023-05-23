@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragment-header :: fm-head"></head>
+
+<head><title>Quản lý khách hàng</title></head>
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
+<div class="wrapper">
+
+    <header th:replace="fragment-header :: fm-header"></header>
+    <aside th:replace="fragment-leftmenu :: fm-leftmenu"></aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-body">
+                            <table id="example2" class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Ảnh</th>
+                                    <th>Họ và tên</th>
+                                    <th>Điểm TL</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Phái</th>
+                                    <th>Email</th>
+                                    <th>Ngày sinh</th>
+                                    <th>SĐT</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+<!-- ./wrapper -->
+
+<div th:replace="fragment-modal-khach-hang :: fm-modal-khach-hang"></div>
+<div th:replace="fragment-modal-product :: fm-modal-upload"></div>
+<div th:replace="fragment-modal-notification :: fm-modal-notification"></div>
+<div th:replace="fragment-header :: fm-script"></div>
+
+<!-- CRUD khách hàng -->
+<script src="../../js/crud-khach-hang.js"></script>
+
+</body>
+
+</html>
